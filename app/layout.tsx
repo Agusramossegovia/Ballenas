@@ -1,8 +1,8 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Footer from './Componentes/Footer'
-import Nav from './Componentes/Nav'
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Footer from './Componentes/footer';
+import Nav from './Componentes/nav';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,11 +19,16 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
+        <div className='contenedor'>
         <Nav/>
 
         {children}
-
+        
         <Footer/>
+        </div>
+
+
+
       </body>
     </html>
   )
